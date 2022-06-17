@@ -1,6 +1,12 @@
-# Android Auto 4 microG
+# Android Auto 4 microG (for A12)
 
-This is a Magisk module that adds Android Auto to de-googled devices running microG. Tested under LineageOS 4 microG 18.1 only, but should run on all Android 11 devices.
+This is a Magisk module that adds Android Auto to de-googled devices running microG on Android 12. Tested under LineageOS 4 microG 19.1 only, but should run on all Android 12 devices.
+
+## Warning
+
+If you update Android Auto app through Aurora, double check to uninstall it through Aurora (or rather downgrade to the version shipped by this module), before uninstalling/disabling aa4mg or boot without Magisk!
+
+Otherwise you may end up with an unbootable device. If the system app is missing (by disabling aa4mg or booting without Magisk), but the update installed by Aurora is still present, your device may fail to boot due to permission errors!
 
 ## Installation
 
@@ -13,9 +19,7 @@ This is a Magisk module that adds Android Auto to de-googled devices running mic
 
 ## Upgrade to current version
 
-This module ships with Android Auto 6.2.6109 (extracted from NikGapps) and can be upgraded through Aurora Store. The reason for shipping with AA 6.2 is that with current versions there's no way to use apps like Screen2Auto / AA Mirror / etc.
-
-However those earlier versions throw "Communication error 8" on some devices (including mine). If you want to use apps like S2A, please try to upgrade to AA 6.3 first (by requesting 63611324 under "Manual download" in Aurora Store). If that fails, you could try AA 6.6 (66612524). If that also fails, just update to the latest version and pass on S2A for now.
+This module ships with Android Auto 6.9.613724 (extracted from NikGapps) and can be upgraded through Aurora Store.
 
 ## First steps
 

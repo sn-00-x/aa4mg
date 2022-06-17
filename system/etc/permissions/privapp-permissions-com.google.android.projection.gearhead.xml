@@ -1,17 +1,5 @@
 <permissions>
   <privapp-permissions package="com.google.android.projection.gearhead">
-    <permission name="android.permission.READ_PHONE_STATE" />
-    <permission name="android.permission.READ_PRIVILEGED_PHONE_STATE" />
-    <permission name="android.permission.CALL_PHONE" />
-    <permission name="android.permission.READ_CALL_LOG" />
-    <permission name="android.permission.READ_CONTACTS" />
-    <permission name="android.permission.GET_ACCOUNTS" />
-    <permission name="android.permission.ACCESS_FINE_LOCATION" />
-    <permission name="com.google.android.gms.permission.CAR_SPEED" />
-    <permission name="android.permission.RECEIVE_SMS" />
-    <permission name="android.permission.SEND_SMS" />
-    <permission name="android.permission.RECORD_AUDIO" />
-    <permission name="android.permission.READ_CALENDAR" />
     <permission name="android.permission.WAKE_LOCK" />
     <permission name="android.permission.INTERNET" />
     <permission name="android.permission.ACCESS_NETWORK_STATE" />
@@ -27,8 +15,22 @@
     <permission name="android.permission.FOREGROUND_SERVICE" />
     <permission name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <permission name="android.permission.VIBRATE" />
+    <permission name="android.permission.SCHEDULE_EXACT_ALARM" />
     <permission name="com.google.android.finsky.permission.GEARHEAD_SERVICE" />
-    <permission name="android.permission.WRITE_SETTINGS" />
+    <permission name="android.permission.CALL_PHONE" />
+    <permission name="android.permission.READ_PHONE_STATE" />
+    <permission name="android.permission.READ_CALL_LOG" />
+    <permission name="android.permission.READ_CONTACTS" />
+    <permission name="android.permission.ACCESS_FINE_LOCATION" />
+    <permission name="android.permission.ACCESS_COARSE_LOCATION" />
+    <permission name="com.google.android.gms.permission.CAR_SPEED" />
+    <permission name="android.permission.RECEIVE_SMS" />
+    <permission name="android.permission.SEND_SMS" />
+    <permission name="android.permission.RECORD_AUDIO" />
+    <permission name="android.permission.READ_CALENDAR" />
+    <permission name="android.permission.BLUETOOTH_SCAN" />
+    <permission name="android.permission.BLUETOOTH_CONNECT" />
+    <permission name="android.permission.ACTIVITY_EMBEDDING" />
     <permission name="android.permission.BLUETOOTH_PRIVILEGED" />
     <permission name="android.permission.CALL_PRIVILEGED" />
     <permission name="android.permission.COMPANION_APPROVE_WIFI_CONNECTIONS" />
@@ -43,6 +45,9 @@
     <permission name="android.permission.START_ACTIVITIES_FROM_BACKGROUND" />
     <permission name="android.permission.TOGGLE_AUTOMOTIVE_PROJECTION" />
     <permission name="android.permission.CHANGE_COMPONENT_ENABLED_STATE" />
+    <permission name="android.permission.UPDATE_APP_OPS_STATS" />
+    <permission name="android.permission.READ_PRIVILEGED_PHONE_STATE" />
     <permission name="android.permission.INTERACT_ACROSS_PROFILES" />
+    <permission name="android.permission.WRITE_SETTINGS" />
   </privapp-permissions>
 </permissions>
