@@ -1,6 +1,12 @@
-# Android Auto 4 microG
+# Android Auto 4 microG (for A11)
 
-This is a Magisk module that adds Android Auto to de-googled devices running microG. Tested under LineageOS 4 microG 18.1 only, but should run on all Android 11 devices.
+This is a Magisk module that adds Android Auto to de-googled devices running microG on Android 11 (see [here](https://github.com/sn-00-x/aa4mg/tree/a12) for A12). Tested under LineageOS 4 microG 18.1 only, but should run on all Android 11 devices.
+
+## Warning
+
+If you update Android Auto app through Aurora, double check to uninstall it through Aurora (or rather downgrade to the version shipped by this module), before uninstalling/disabling aa4mg or boot without Magisk!
+
+Otherwise you may end up with an unbootable device. If the system app is missing (by disabling aa4mg or booting without Magisk), but the update installed by Aurora is still present, your device may fail to boot due to permission errors!
 
 ## Installation
 
