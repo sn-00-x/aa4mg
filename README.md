@@ -75,6 +75,14 @@ To mitigate this, first un-install the app, then you can use following ways to "
     pm install -i "com.android.vending" <apk>
     ```
 
+## Can not open Android Auto
+If you can not directly open the AA app after installation,   
+then you can still access the AA settings through either of below ways:
+
+- Settings => Connected Devices => Connection Preferences => Android Auto
+- Install the [Android Auto for phone screens](https://github.com/sn-00-x/aa4mg/raw/development/stubs/Android-Auto-for-phone-screens-v1.1.apk) `.apk` included in the [`stubs`](https://github.com/sn-00-x/aa4mg/tree/master/stubs) folder of this repo,   
+use [King Installer](https://github.com/Rikj000/KingInstaller) to "install as Google Play Store", then launch AA through this app.
+
 ## Build
 
 ```bash
