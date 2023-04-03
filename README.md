@@ -23,6 +23,14 @@ When first using your device in your car, follow the usual flow on your head uni
 
 Android Auto won't show apps not installed through Play Store. Since you most probably installed all your compatible apps through Aurora Store, they are missing in Android Auto. In the Android Auto interface on your head unit: select "Settings", scroll down, tap "See more in the phone app". On your phone: scroll down, tap version 10 times to become a developer, tap the three dots in the upper right corner and select "Developer Settings", then check "Unkown sources".
 
+## Can not open Android Auto
+If you can not directly open the AA app after installation,   
+then you can still access the AA settings through either of below ways:
+
+- Settings => Connected Devices => Connection Preferences => Android Auto
+- Install the [Android Auto for phone screens](https://github.com/Rikj000/AndroidAuto4MicroG/raw/development/stubs/Android-Auto-for-phone-screens-v1.1.apk) `.apk` included in the [`stubs`](https://github.com/Rikj000/AndroidAuto4MicroG/tree/development/stubs) folder of this repo,   
+use [King Installer](https://github.com/Rikj000/KingInstaller) to "install as Google Play Store", then launch AA through this app.
+
 ## Build
 
     zip aa4mg.zip -9r *
