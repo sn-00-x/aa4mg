@@ -1,33 +1,88 @@
 # Android Auto 4 microG (for A13)
 
-This is a Magisk module that adds Android Auto to de-googled devices running microG on Android 13 (see [here](https://github.com/sn-00-x/aa4mg/branches) for other versions). Tested under LineageOS 20 only, but should run on all Android 13 devices.
+This is a Magisk module that adds AA (Android Auto) to de-googled devices running microG on Android 13!   
+Tested under LineageOS 20 only, but should run on all Android 13 devices.
+*(See [here](https://github.com/sn-00-x/aa4mg/branches) for other Android versions)*
 
 ## Warning
 
-If you update Android Auto app through Aurora, double check to uninstall it through Aurora (or rather downgrade to the version shipped by this module), before uninstalling/disabling aa4mg or boot without Magisk!
+**Before uninstalling `aa4mg`,**   
+Settings => Apps => See all apps => Android Auto => Triple dot icon *(top right corner)* => Uninstall updates
 
-Otherwise you may end up with an unbootable device. If the system app is missing (by disabling aa4mg or booting without Magisk), but the update installed by Aurora is still present, your device may fail to boot due to permission errors!
+**Otherwise you may end up with an un-boot-able device.**   
+If the AA system app is missing *(by disabling `aa4mg` or booting without Magisk)*,   
+but the AA update installed is still present,   
+your device may fail to boot due to permission errors!
 
 ## Installation
 
-- Install [LineageOS for microG](https://lineage.microg.org/)
-- Install [Magisk](https://github.com/topjohnwu/Magisk/)
-- Install this module through the Magisk Manager App
-- Install [Google TTS](https://play.google.com/store/apps/details?id=com.google.android.tts)
-- Install either [Google App Stub](https://git.sr.ht/~dylanger/Google-App-Stub) or the original [Google](https://play.google.com/store/apps/details?id=com.google.android.googlequicksearchbox)-app
-- Optionally upgrade Android Auto through Aurora Store (see "Upgrade to current version" below)
+1. Install [LineageOS for microG](https://lineage.microg.org/)
+2. Install [Magisk](https://github.com/topjohnwu/Magisk/)
+3. Install the dependencies for AA, choose one of either options for each dependency:   
+    - **As empty / stub APKs**:   
+        Install the APKs included in the [`stubs`](https://github.com/sn-00-x/aa4mg/tree/master/stubs) folder of this repo,   
+        use [King Installer](https://github.com/Rikj000/KingInstaller) to "install as Google Play Store".
+        - [Fake Google](https://github.com/sn-00-x/aa4mg/raw/master/stubs/Google-Stub-2022-01-29-SolidHal.apk)
+        - [Fake Google Speech Services / TTS](https://github.com/sn-00-x/aa4mg/raw/master/stubs/Google-Speech-Services-Stub-2022-01-29-SolidHal.apk)
+        - [Fake Google Maps](https://github.com/sn-00-x/aa4mg/raw/master/stubs/Google-Maps-Stub-v2100000000-Rikj000.apk)
+    - **As full / official APKs**:   
+        Install through [Aurora Store](https://gitlab.com/AuroraOSS/AuroraStore),   
+        use `Root installer` as installation method to "install as Google Play Store".
+        - [Google](https://play.google.com/store/apps/details?id=com.google.android.googlequicksearchbox)
+        - [Google Speech Services / TTS](https://play.google.com/store/apps/details?id=com.google.android.tts)
+        - [Google Maps](https://play.google.com/store/apps/details?id=com.google.android.apps.maps)
+    - Feel free to freeze these dependencies through [Hail](https://github.com/aistra0528/Hail).
+4. Install [Android Auto](https://play.google.com/store/apps/details?id=com.google.android.projection.gearhead) through [Aurora Store](https://gitlab.com/AuroraOSS/AuroraStore),   
+    use `Root installer` as installation method to "install as Google Play Store".
+5. Install the [aa4mg](https://github.com/sn-00-x/aa4mg) module through the Magisk Manager App => Reboot
+6. Settings => Connected Devices => Connection Preferences => Android Auto
+    - Scroll down => Tap `Version` 10 times => Accept PopUp to become a developer
+    - Triple dot icon *(top right corner)* => Developer Settings
+        - Application Mode => Developer
+        - Scroll down => Check `Unknown Resources`
+
+## Updates
+
+Once the installation is complete, [Android Auto](https://play.google.com/store/apps/details?id=com.google.android.projection.gearhead) can be updated through [Aurora Store](https://gitlab.com/AuroraOSS/AuroraStore).
+
+## Uninstall
+
+1. Settings => Apps => See all apps => Android Auto => Triple dot icon *(top right corner)* => Uninstall updates
+2. Magisk => Modules => Remove "Android Auto 4 microG" => Reboot
 
 ## First steps
 
-When first using your device in your car, follow the usual flow on your head unit and device until you reach a page asking for location permissions for maps. Double check maps has permissions and click "cancel". If nothing happens, unplug and replug your device. When asked for, grant all permissions. In case you encounter an error "Communication error 17", manually open Settings and grant all available persmissions to the Android Auto app. Then unplug and replug your device.
+When first using your device in your car,   
+follow the usual flow on your head unit and device until you reach a page asking for location permissions for maps.   
+Double check maps has permissions and click "cancel".   
 
-Android Auto won't show apps not installed through Play Store. Since you most probably installed all your compatible apps through Aurora Store, they are missing in Android Auto. In the Android Auto interface on your head unit: select "Settings", scroll down, tap "See more in the phone app". On your phone: scroll down, tap version 10 times to become a developer, tap the three dots in the upper right corner and select "Developer Settings", then check "Unkown sources".
+If nothing happens, unplug and re-plug your device.   
+When asked for, grant all permissions.   
+
+In case you encounter an error "Communication error 17",   
+manually open Settings and grant all available permissions to the Android Auto app.   
+Then unplug and re-plug your device.
+
+## 3th party apps
+
+**Android Auto won't show apps not installed through Google Play Store.**   
+To mitigate this, first un-install the app, then you can use following ways to "install as Google Play Store".
+
+- **Play Store APKs**: Use [Aurora Store](https://gitlab.com/AuroraOSS/AuroraStore) + `Root installer` as the installation method, works for single + split APKs.
+- **Non Play Store APKs**: Use [King Installer](https://github.com/Rikj000/KingInstaller), works for single APK.
+- Or use **direct ADB install**, works for single APK:   
+    ```bash
+    pm install -i "com.android.vending" <apk>
+    ```
 
 ## Build
 
-    zip aa4mg.zip -9r *
+```bash
+zip aa4mg.zip -9r *
+```
 
 ## Credits
 
 - **Nikhil Menghani** for [NikGapps](https://nikgapps.com/)
 - **[@braga2](https://github.com/braga2)** for his [tutorial on xda](https://forum.xda-developers.com/t/microg-android-auto-fully-working.4319159/page-6)
+- **[@SolidHal](https://github.com/SolidHal)** for the initial [dependency stub APKs](https://github.com/SolidHal/android-auto-stub)
