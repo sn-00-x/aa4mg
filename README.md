@@ -65,7 +65,7 @@ Then unplug and re-plug your device.
 
 ## 3th party apps
 
-**Android Auto won't show apps not installed through Google Play Store.**   
+#### Android Auto won't show apps not installed through Google Play Store.
 To mitigate this, first un-install the app, then you can use following ways to "install as Google Play Store".
 
 - **Play Store APKs**: Use [Aurora Store](https://gitlab.com/AuroraOSS/AuroraStore) + `Root installer` as the installation method, works for single + split APKs.
@@ -74,6 +74,12 @@ To mitigate this, first un-install the app, then you can use following ways to "
     ```bash
     pm install -i "com.android.vending" <apk>
     ```
+
+#### Android Auto still won't show some apps.
+Some apps have additional restrictions applied on them by AA,   
+which leads to them still not showing up, even if "installed as Google Play Store".
+
+To unlock these apps use [Android Auto - Xposed Unlocked](https://github.com/Rikj000/Android-Auto-Xposed-Unlocked)
 
 ## Can not open Android Auto
 If you can not directly open the AA app after installation,   
