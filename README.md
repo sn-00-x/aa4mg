@@ -92,7 +92,7 @@ use [King Installer](https://github.com/Rikj000/KingInstaller) to "install as Go
 ## Build
 
 ```bash
-zip aa4mg.zip -9r *
+zip aa4mg.zip -9r * -x "stubs/*"
 ```
 
 ## Credits
