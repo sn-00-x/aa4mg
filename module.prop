@@ -1,6 +1,6 @@
 id=aa4mg
 name=Android Auto 4 microG
-version=aa4mg 0.1
-versionCode=21001
-author=sn00x
-description=Install Android Auto on top of microG
+version=aa4mg 0.4.2-a11
+versionCode=230406
+author=sn00x & Rikj000
+description=Install Android Auto on top of MicroG
