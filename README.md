@@ -98,7 +98,7 @@ then you can still access the AA settings through either of below ways:
 ## Build
 
 ```bash
-zip aa4mg.zip -9r * -x "stubs/*"
+zip aa4mg.zip -9r *
 ```
 
 ## Credits
