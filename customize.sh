@@ -66,8 +66,38 @@ else
     ui_print "Excluded Fake Google Search stub from installation..."
 fi
 
-cp $MODPATH/data/data/com.google.android.gms/databases/phenotype.db /data/data/com.google.android.gms/databases/phenotype.db
-cp $MODPATH/data/data/com.google.android.projection.gearhead/files/phenotype/shared/com.google.android.projection.gearhead.pb /data/data/com.google.android.projection.gearhead/files/phenotype/shared/com.google.android.projection.gearhead.pb
+# Setup "vanilla" phenotype.db SQLite database, pre-patched with AA-Tweaker.
+# Used to make Android Auto + apps work correctly, can be patched further with AA-Tweaker / manually.
+ui_print ""
+ui_print "Creating initial 'phenotype.db'..."
+GMS_PATH=/data/data/com.google.android.gms/
+GMS_OWNER=$(stat -c '%U' "$GMS_PATH")
+PHENOTYPE_DB_PATH="$GMS_PATH"databases/
+
+# Create the folder if missing + Inject the phenotype.db file
+mkdir -p "$PHENOTYPE_DB_PATH"
+cp "$MODPATH""$PHENOTYPE_DB_PATH"phenotype.db \
+    "$PHENOTYPE_DB_PATH"phenotype.db
+
+# Restore correct ownership
+chown -R "$GMS_OWNER" "$PHENOTYPE_DB_PATH"
+chgrp -R "$GMS_OWNER" "$PHENOTYPE_DB_PATH"
+
+# Setup "vanilla" com.google.android.projection.gearhead.pb binary file.
+# CoolWalk requirement, file cannot be modified..
+ui_print "Setting up additional dependencies..."
+AA_PATH=/data/data/com.google.android.projection.gearhead/
+AA_OWNER=$(stat -c '%U' "$AA_PATH")
+PHENOTYPE_PB_PATH="$AA_PATH"files/phenotype/shared/
+
+# Create the folder if missing + Inject the binary .pb file
+mkdir -p "$PHENOTYPE_PB_PATH"
+cp "$MODPATH""$PHENOTYPE_PB_PATH"com.google.android.projection.gearhead.pb \
+    "$PHENOTYPE_PB_PATH"com.google.android.projection.gearhead.pb
+
+# Restore correct ownership
+chown -R "$AA_OWNER" "$AA_PATH"files/
+chgrp -R "$AA_OWNER" "$AA_PATH"files/
 
 # Finish installation, dependency APKs will automatically be installed on reboot
 ui_print ""
