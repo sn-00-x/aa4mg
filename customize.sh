@@ -154,6 +154,24 @@ if [ ! -f "${PHENOTYPE_PB_PATH}com.google.android.projection.gearhead.pb" ] ; th
     chgrp -R "$AA_GROUP" "$AA_PATH"files/
 fi
 
+# At this point, the module is ready for A13
+# We need to make some changes for A11 and A12
+if [ $API -lt 33 ] ; then
+    mv $MODPATH/system/product/* $MODPATH/system/
+    rm -rf $MODPATH/system/product
+fi
+
+if [ $API -lt 31 ] ; then
+    # is this really needed for A11?
+    if [ -f "$MODPATH/system/priv-app/Velvet/Velvet.apk" ] ; then
+        mkdir -p $MODPATH/system/app/QuickSearchBox
+        mv $MODPATH/system/priv-app/Velvet/Velvet.apk $MODPATH/system/app/QuickSearchBox/QuickSearchBox.apk
+        rm -rf $MODPATH/system/priv-app/Velvet
+
+        ls $MODPATH/system/app/QuickSearchBox -1
+    fi
+fi
+
 # Finish installation, dependency APKs will automatically be installed on reboot
 ui_print ""
 ui_print "Installation of"
