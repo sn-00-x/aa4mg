@@ -1,10 +1,7 @@
-# Android Auto 4 MicroG (for A13)
+# Android Auto 4 MicroG (for A11, A12, A13)
 
-This is a [Magisk](https://topjohnwu.github.io/Magisk/) module that installs the required Android Auto dependencies,   
-together with [XLauncher Unlocked](https://github.com/Rikj000/Android-Auto-XLauncher-Unlocked), onto de-googled devices running MicroG on Android 13!
-
-Tested under LineageOS 20 only, but should run on all Android 13 devices.
-*(See [here](https://github.com/sn-00-x/aa4mg/branches) for other Android versions)*
+This is a [Magisk](https://topjohnwu.github.io/Magisk/) module that provides an AA (Android Auto) stub as system app, optionally together with [XLauncher Unlocked](https://github.com/Rikj000/Android-Auto-XLauncher-Unlocked) and stubs for Google TTS, Google Maps & Google Search.
+It is intended to be used on de-googled devices running MicroG!
 
 ## Warning
 
@@ -18,7 +15,7 @@ your device may fail to boot due to permission errors!
 
 ## Installation
 
-1. Install [LineageOS for MicroG](https://lineage.microg.org/)
+1. Install de-googled ROM with microG (for example [LineageOS for MicroG](https://lineage.microg.org/))
 2. Install [Magisk](https://topjohnwu.github.io/Magisk/install.html)
 3. Install the [aa4mg](https://github.com/sn-00-x/aa4mg/releases) module through the Magisk Manager App => Reboot
     *(Select the desired dependency stubs with the volume keys during the installation process)*
@@ -61,7 +58,7 @@ In case you encounter an error "Communication error 17",
 manually open Settings and grant all available permissions to the Android Auto app.   
 Then unplug and re-plug your device.
 
-## 3th party apps
+## 3rd party apps
 
 #### Android Auto won't show apps not installed through Google Play Store.
 To mitigate this, first un-install the app, then you can use following ways to "install as Google Play Store".
