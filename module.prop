@@ -1,6 +1,7 @@
 id=aa4mg
 name=Android Auto 4 MicroG
-version=aa4mg 0.5.1-a13
-versionCode=230410
+version=aa4mg 0.6
+versionCode=2304171
 author=sn00x, Byreqz & Rikj000
-description=Install required Android Auto stubs with XLauncher Unlocked on top of MicroG!
+description=Install Android Auto, optional stubs and XLauncher Unlocked on top of MicroG!
+updateJson=https://raw.githubusercontent.com/sn-00-x/aa4mg/master/update.json
