@@ -1,3 +1,8 @@
+v0.6.1 (A11, A12 + A13)
+
+- Fix small logic error
+- Add uninstall script to avoid bootloop on removal of aa4mg without uninstalling aa updates first. Still happens on deactivation, as stated in the warning section of README!
+
 v0.6 (A11, A12 + A13)
 
 - One version for all android versions
