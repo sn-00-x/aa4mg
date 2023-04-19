@@ -135,14 +135,15 @@ if [ "$COPY_PHENOTYPE_DB" = "true" ] ; then
   chgrp -R "$GMS_GROUP" "$PHENOTYPE_DB_PATH"
 fi
 
+AA_PATH=/data/data/com.google.android.projection.gearhead/
+PHENOTYPE_PB_PATH="$AA_PATH"files/phenotype/shared/
+
 if [ ! -f "${PHENOTYPE_PB_PATH}com.google.android.projection.gearhead.pb" ] ; then
     # Setup "vanilla" com.google.android.projection.gearhead.pb binary file.
     # CoolWalk requirement, file cannot be modified..
     ui_print "Setting up additional dependencies..."
-    AA_PATH=/data/data/com.google.android.projection.gearhead/
     AA_OWNER=$(stat -c '%U' "$AA_PATH")
     AA_GROUP=$(stat -c '%U' "$AA_PATH")
-    PHENOTYPE_PB_PATH="$AA_PATH"files/phenotype/shared/
 
     # Create the folder if missing + Inject the binary .pb file
     mkdir -p "$PHENOTYPE_PB_PATH"
