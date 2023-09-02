@@ -3,6 +3,8 @@
 This is a [Magisk](https://topjohnwu.github.io/Magisk/) module that provides an AA (Android Auto) stub as system app, optionally together with [XLauncher Unlocked](https://github.com/Rikj000/Android-Auto-XLauncher-Unlocked) and stubs for Google TTS, Google Maps & Google Search.
 It is intended to be used on de-googled devices running MicroG!
 
+If you instead prefer a non-root solution to be built into your own rom, please have a look at [Android Auto as user app with media apps support](https://github.com/sn-00-x/android-auto)
+
 ## Warning
 
 **Before uninstalling `aa4mg`,**   
