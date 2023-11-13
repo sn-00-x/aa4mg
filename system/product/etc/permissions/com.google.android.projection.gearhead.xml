@@ -60,5 +60,9 @@
   <permission name="android.permission.REQUEST_COMPANION_PROFILE_AUTOMOTIVE_PROJECTION" />
   <permission name="android.permission.ADD_TRUSTED_DISPLAY" />
   <permission name="android.permission.ASSOCIATE_COMPANION_DEVICES" />
+  <permission name="android.permission.NEARBY_WIFI_DEVICES" />
+  <permission name="android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE" />
+  <permission name="android.permission.FOREGROUND_SERVICE_LOCATION" />
+  <permission name="android.permission.FOREGROUND_SERVICE_MICROPHONE" />
   </privapp-permissions>
 </permissions>
