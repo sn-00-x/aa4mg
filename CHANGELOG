@@ -1,3 +1,7 @@
+v0.6.3 (A11, A12, A13 + A14)
+
+- Add new stub from current pixel image (to fix an issue with A14)
+
 v0.6.2 (A11, A12, A13 + A14)
 
 - Add two permissions introduced in A14
