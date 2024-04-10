@@ -24,12 +24,9 @@ your device may fail to boot due to permission errors!
 4. Install [Android Auto](https://play.google.com/store/apps/details?id=com.google.android.projection.gearhead) through [Aurora Store](https://gitlab.com/AuroraOSS/AuroraStore),   
     use `Root installer` as installation method to "install as Google Play Store".   
     *(You can also install through your Package Manager if Aurora doesn't work, not preferred as it does not "install as Google Play Store")*
-5. Settings => Apps => See all apps => Android Auto => Mobile data & Wi-Fi => UnCheck all
-6. Settings => Notifications => Device & app notifications => Android Auto => Check `Allow notification access` => Ok *(**Settings will still be restricted!**)*
-7. Settings => Apps => See all apps => Android Auto => Triple dot icon => Allow restricted settings
-8. Settings => Notifications => Device & app notifications => Android Auto => Check `Allow notification access` => Allow
-9. Settings => Connected Devices => Connection Preferences => Android Auto
-    - System => UnCheck `Google Analytics`
+5. **(Optional)** Settings => Apps => See all apps => Android Auto => Mobile data & Wi-Fi => UnCheck all - ***WARNING:*** **THIS WILL MAKE IT IMPOSSIBLE TO CONNECT WIRELESSLY**. If you want to use Android Auto wirelessly you should keep those enabled and skip this step. This step provides further privacy,
+6. Settings => Notifications => Device & app notifications => Android Auto => Check `Allow notification access` => Allow
+8. Settings => Connected Devices => Connection Preferences => Android Auto
     - About => Tap `Version` a lot => Accept PopUp to become a developer
     - Triple dot icon *(top right corner)* => Developer Settings
         - Application Mode => Developer
@@ -67,10 +64,11 @@ To mitigate this, first un-install the app, then you can use following ways to "
 
 - **Play Store APKs**: Use [Aurora Store](https://gitlab.com/AuroraOSS/AuroraStore) + `Root installer` as the installation method, works for single + split APKs.
 - **Non Play Store APKs**: Use [King Installer](https://github.com/Rikj000/KingInstaller), works for single APK.
-- Or use **direct ADB install**, works for single APK:   
+- Or use **direct Android Shell install**, works for single APK:   
     ```bash
     pm install -i "com.android.vending" <apk>
     ```
+- **Split APKs**: Use [AppManager](https://github.com/MuntashirAkon/AppManager), in the settings in `Installer => Installer App` choose microG Companion or manually enter `com.android.vending` before installing the APK.
 
 #### Android Auto still won't show some apps.
 Some apps have additional restrictions applied on them by AA,   
