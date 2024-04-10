@@ -24,8 +24,8 @@ your device may fail to boot due to permission errors!
 4. Install [Android Auto](https://play.google.com/store/apps/details?id=com.google.android.projection.gearhead) through [Aurora Store](https://gitlab.com/AuroraOSS/AuroraStore),   
     use `Root installer` as installation method to "install as Google Play Store".   
     *(You can also install through your Package Manager if Aurora doesn't work, not preferred as it does not "install as Google Play Store")*
-5. **(Optional)** Settings => Apps => See all apps => Android Auto => Mobile data & Wi-Fi => UnCheck all - ***WARNING:*** **THIS WILL MAKE IT IMPOSSIBLE TO CONNECT WIRELESSLY**. If you want to use Android Auto wirelessly you should keep those enabled and skip this step. This step provides further privacy,
-6. Settings => Notifications => Device & app notifications => Android Auto => Check `Allow notification access` => Allow
+5. **(Optional)** Settings => Apps => See all apps => Android Auto => Mobile data & Wi-Fi => UnCheck all - ***WARNING:*** **THIS WILL MAKE IT IMPOSSIBLE TO CONNECT WIRELESSLY**. If you want to use Android Auto wirelessly you should keep these options enabled (already enabled by default) and skip this step. This step only provides further privacy.
+6. Settings => Notifications => Device & app notifications => Android Auto => Check `Allow Notification Access` => Allow
 8. Settings => Connected Devices => Connection Preferences => Android Auto
     - About => Tap `Version` a lot => Accept PopUp to become a developer
     - Triple dot icon *(top right corner)* => Developer Settings
