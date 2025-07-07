@@ -33,7 +33,7 @@ your device may fail to boot due to permission errors!
     - About => Tap `Version` a lot => Accept PopUp to become a developer
     - Triple dot icon *(top right corner)* => Developer Settings
         - Application Mode => Developer
-        - Scroll down => Check `Unknown Resources`
+        - Scroll down => Check `Unknown Sources`
     - Close app
 
 ## Updates
