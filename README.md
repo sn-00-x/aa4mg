@@ -26,7 +26,10 @@ your device may fail to boot due to permission errors!
     *(You can also install through your Package Manager if Aurora doesn't work, not preferred as it does not "install as Google Play Store")*
 5. **(Optional)** Settings => Apps => See all apps => Android Auto => Mobile data & Wi-Fi => UnCheck all - ***WARNING:*** **THIS WILL MAKE IT IMPOSSIBLE TO CONNECT WIRELESSLY**. If you want to use Android Auto wirelessly you should keep these options enabled (already enabled by default) and skip this step. This step only provides further privacy.
 6. Settings => Notifications => Device & app notifications => Android Auto => Check `Allow Notification Access` => Allow
-8. Settings => Connected Devices => Connection Preferences => Android Auto
+   ([A15] Settings => Notifications => Notification read, reply & control)
+7. [A15 and LineageOS based]  Settings => Security & privacy => Privacy controls => Permissions manager => Check Android Auto is allowed in every permisssion, especcialy Call logs and Phone.
+   (sometimes you can refuse permission by mistake when popup came prompt, here you cane change that)
+8.Settings => Connected Devices => Connection Preferences => Android Auto
     - About => Tap `Version` a lot => Accept PopUp to become a developer
     - Triple dot icon *(top right corner)* => Developer Settings
         - Application Mode => Developer
